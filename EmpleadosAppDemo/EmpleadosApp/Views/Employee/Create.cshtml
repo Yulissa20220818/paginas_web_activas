@@ -1,0 +1,30 @@
+﻿@model EmployeeModel
+@{
+    ViewData["Title"] = "Nuevo Empleado";
+}
+
+<h1>Nuevo Empleado</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Create">
+                @Html.AntiForgeryToken()
+                <div class="mb-3">
+                    <label asp-for="FirstName" class="form-label">Nombre</label>
+                    <input asp-for="FirstName" type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="LastName" class="form-label">Apellidos</label>
+                    <input asp-for="LastName" type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Phone" class="form-label">Telefono</label>
+                    <input asp-for="Phone" type="text" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            
+        </div>
+    </div>
+</div>
